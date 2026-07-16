@@ -1,16 +1,17 @@
 """
 Dashboard Musculation
-Version : 0.2.0
+Version : 0.2.1
 
 Cette version :
-- se connecte à l'API Hevy
-- récupère une page de séances
-- sauvegarde le JSON dans data/hevy_raw.json
+- récupère toutes les pages Hevy
+- fusionne toutes les séances
+- sauvegarde un JSON unique
 
-La pagination sera ajoutée à l'étape suivante.
+La prochaine étape filtrera les séances avant le 01/01/2026.
 """
 
 import json
+import math
 import os
 from pathlib import Path
 
@@ -25,10 +26,11 @@ HEADERS = {
 }
 
 
+def log(message):
+    print(f"[INFO] {message}")
+
+
 def get_workouts(page=1, page_size=5):
-    """
-    Récupère une page de séances.
-    """
 
     response = requests.get(
         f"{BASE_URL}/workouts",
@@ -45,9 +47,6 @@ def get_workouts(page=1, page_size=5):
 
 
 def save_json(data, filename):
-    """
-    Sauvegarde un JSON joliment formaté.
-    """
 
     Path("data").mkdir(exist_ok=True)
 
@@ -64,34 +63,48 @@ def main():
 
     print("=" * 50)
     print("Dashboard Musculation")
-    print("Version 0.2.0")
+    print("Version 0.2.1")
     print("=" * 50)
-
     print()
 
-    print("Connexion à Hevy...")
+    all_workouts = []
 
-    data = get_workouts()
+    page = 1
+    total_pages = None
 
-    workouts = data.get("workouts", [])
+    while True:
 
-    print(f"OK ({len(workouts)} séances reçues)")
+        log(f"Lecture page {page}")
 
-    save_json(data, "hevy_raw.json")
+        data = get_workouts(page)
+
+        workouts = data.get("workouts", [])
+
+        if total_pages is None:
+            total_pages = data.get("page_count", 1)
+            log(f"{total_pages} pages détectées")
+
+        log(f"{len(workouts)} séances")
+
+        all_workouts.extend(workouts)
+
+        if page >= total_pages:
+            break
+
+        page += 1
+
+    result = {
+        "workouts": all_workouts,
+        "count": len(all_workouts)
+    }
+
+    save_json(result, "hevy_raw.json")
 
     print()
-
-    print("Sauvegarde effectuée.")
-
-    print()
-
-    print("Dernières séances :")
-
-    for workout in workouts:
-
-        print(
-            f"- {workout['title']} | {workout['start_time']}"
-        )
+    print("=" * 50)
+    log("Import terminé")
+    log(f"{len(all_workouts)} séances récupérées")
+    print("=" * 50)
 
 
 if __name__ == "__main__":
