@@ -333,6 +333,21 @@ def main():
     )
 
     print()
+
+print("===== Liste des exercices =====")
+
+for exercise in sorted(
+    exercise_index.values(),
+    key=lambda x: x["name"]
+):
+
+    print(
+    f'{exercise["name"]:<45} {exercise["workout_count"]:>3} séances'
+)
+
+print("===============================")
+
+    print()
     print("=" * 50)
 
     log("Import terminé")
