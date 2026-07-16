@@ -238,6 +238,43 @@ def build_exercise_index(workouts):
 
     return exercise_index
 
+# ============================================================
+# Historique d'un exercice
+# ============================================================
+
+def get_exercise_history(workouts, template_id):
+    """
+    Retourne toutes les occurrences d'un exercice
+    classées par date.
+    """
+
+    history = []
+
+    for workout in workouts:
+
+        workout_date = workout.get("start_time")
+
+        for exercise in workout.get("exercises", []):
+
+            if exercise.get("exercise_template_id") != template_id:
+                continue
+
+            history.append(
+                {
+                    "date": workout_date,
+                    "workout_id": workout.get("id"),
+                    "workout_title": workout.get("title"),
+                    "exercise_name": exercise.get("title"),
+                    "sets": exercise.get("sets", [])
+                }
+            )
+
+    history.sort(
+        key=lambda x: x["date"]
+    )
+
+    return history
+
 # ==========================================================
 # Sauvegarde de la base des exercices
 # ==========================================================
