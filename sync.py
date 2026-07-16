@@ -319,6 +319,18 @@ def main():
         ignored_count=ignored_count,
         workouts=filtered_workouts
     )
+    
+    # ==========================================================
+    # Construction de l'index des exercices
+    # ==========================================================
+
+    exercise_index = build_exercise_index(
+        filtered_workouts
+    )
+
+    log(
+        f"{len(exercise_index)} exercices uniques détectés"
+    )
 
     print()
     print("=" * 50)
