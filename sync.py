@@ -228,6 +228,10 @@ def build_exercise_index(workouts):
                 exercise.get("sets", [])
             )
 
+            if workout_date < current["first_seen"]:
+            current["first_seen"] = workout_date
+
+            if workout_date > current["last_seen"]:
             current["last_seen"] = workout_date
 
             current["workout_ids"].append(workout_id)
