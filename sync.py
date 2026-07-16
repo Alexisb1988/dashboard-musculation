@@ -235,6 +235,23 @@ def build_exercise_index(workouts):
     return exercise_index
 
 # ==========================================================
+# Sauvegarde de la base des exercices
+# ==========================================================
+
+def save_exercise_database(exercise_index):
+    """
+    Sauvegarde la base des exercices.
+
+    Cette base sera enrichie progressivement avec les
+    statistiques calculées sur chaque exercice.
+    """
+
+    save_json(
+        exercise_index,
+        "exercise_database.json"
+    )
+
+# ==========================================================
 # Filtrage des séances
 # ==========================================================
 
@@ -326,9 +343,16 @@ def main():
     exercise_index = build_exercise_index(
         filtered_workouts
     )
+
+    save_exercise_database(
+    exercise_index
+    )
     
     log(
         f"{len(exercise_index)} exercices uniques détectés"
+    )
+    log(
+    "exercise_database.json généré"
     )
     
     print()
