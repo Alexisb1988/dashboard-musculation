@@ -324,15 +324,15 @@ def main():
     # Construction de l'index des exercices
     # ==========================================================
 
-    exercise_index = build_exercise_index(
-        filtered_workouts
-    )
+exercise_index = build_exercise_index(
+    filtered_workouts
+)
 
-    log(
-        f"{len(exercise_index)} exercices uniques détectés"
-    )
+log(
+    f"{len(exercise_index)} exercices uniques détectés"
+)
 
-    print()
+print()
 
 print("===== Liste des exercices =====")
 
@@ -342,20 +342,20 @@ for exercise in sorted(
 ):
 
     print(
-    f'{exercise["name"]:<45} {exercise["workout_count"]:>3} séances'
-)
+        f'{exercise["name"]:<45} {exercise["workout_count"]:>3} séances'
+    )
 
 print("===============================")
 
-    print()
-    print("=" * 50)
+print()
+print("=" * 50)
 
-    log("Import terminé")
-    log(f"{len(all_workouts)} séances téléchargées")
-    log(f"{len(filtered_workouts)} séances conservées")
-    log(f"{ignored_count} séances ignorées")
+log("Import terminé")
+log(f"{len(all_workouts)} séances téléchargées")
+log(f"{len(filtered_workouts)} séances conservées")
+log(f"{ignored_count} séances ignorées")
 
-    print("=" * 50)
+print("=" * 50)
 
 
 if __name__ == "__main__":
