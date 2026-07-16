@@ -220,6 +220,17 @@ def main():
 
     save_json(database, "hevy_database.json")
 
+     # ==========================================================
+    # Sauvegarde des métadonnées
+    # ==========================================================
+
+    save_metadata(
+        downloaded_count=len(all_workouts),
+        kept_count=len(filtered_workouts),
+        ignored_count=ignored_count,
+        workouts=filtered_workouts
+    )
+
     print()
     print("=" * 50)
 
