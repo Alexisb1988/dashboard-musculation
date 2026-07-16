@@ -139,17 +139,38 @@ def main():
 
         page += 1
 
-    result = {
+# ==========================================================
+    # Sauvegarde des données brutes
+    # ==========================================================
+
+    raw_data = {
         "workouts": all_workouts,
         "count": len(all_workouts)
     }
 
-    save_json(result, "hevy_raw.json")
+    save_json(raw_data, "hevy_raw.json")
+
+    # ==========================================================
+    # Création de la base de données filtrée
+    # ==========================================================
+
+    filtered_workouts, ignored_count = filter_workouts(all_workouts)
+
+    database = {
+        "workouts": filtered_workouts,
+        "count": len(filtered_workouts)
+    }
+
+    save_json(database, "hevy_database.json")
 
     print()
     print("=" * 50)
+
     log("Import terminé")
-    log(f"{len(all_workouts)} séances récupérées")
+    log(f"{len(all_workouts)} séances téléchargées")
+    log(f"{len(filtered_workouts)} séances conservées")
+    log(f"{ignored_count} séances ignorées")
+
     print("=" * 50)
 
 
