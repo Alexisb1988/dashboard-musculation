@@ -1,30 +1,98 @@
+"""
+Dashboard Musculation
+Version : 0.2.0
+
+Cette version :
+- se connecte à l'API Hevy
+- récupère une page de séances
+- sauvegarde le JSON dans data/hevy_raw.json
+
+La pagination sera ajoutée à l'étape suivante.
+"""
+
 import json
 import os
 from pathlib import Path
 
 import requests
 
+BASE_URL = "https://api.hevyapp.com/v1"
 API_KEY = os.getenv("HEVY_API_KEY")
 
-headers = {
+HEADERS = {
     "api-key": API_KEY,
     "accept": "application/json"
 }
 
-url = "https://api.hevyapp.com/v1/workouts?page=1&pageSize=5"
 
-response = requests.get(url, headers=headers)
+def get_workouts(page=1, page_size=5):
+    """
+    Récupère une page de séances.
+    """
 
-if response.status_code != 200:
-    raise Exception(f"Erreur API Hevy : {response.status_code}\n{response.text}")
+    response = requests.get(
+        f"{BASE_URL}/workouts",
+        headers=HEADERS,
+        params={
+            "page": page,
+            "pageSize": page_size
+        }
+    )
 
-data = response.json()
+    response.raise_for_status()
 
-# Création du dossier data si besoin
-Path("data").mkdir(exist_ok=True)
+    return response.json()
 
-# Sauvegarde du JSON complet
-with open("data/hevy_raw.json", "w", encoding="utf-8") as f:
-    json.dump(data, f, indent=2, ensure_ascii=False)
 
-print(f"✅ {len(data.get('workouts', []))} séances sauvegardées.")
+def save_json(data, filename):
+    """
+    Sauvegarde un JSON joliment formaté.
+    """
+
+    Path("data").mkdir(exist_ok=True)
+
+    with open(f"data/{filename}", "w", encoding="utf-8") as file:
+        json.dump(
+            data,
+            file,
+            indent=2,
+            ensure_ascii=False
+        )
+
+
+def main():
+
+    print("=" * 50)
+    print("Dashboard Musculation")
+    print("Version 0.2.0")
+    print("=" * 50)
+
+    print()
+
+    print("Connexion à Hevy...")
+
+    data = get_workouts()
+
+    workouts = data.get("workouts", [])
+
+    print(f"OK ({len(workouts)} séances reçues)")
+
+    save_json(data, "hevy_raw.json")
+
+    print()
+
+    print("Sauvegarde effectuée.")
+
+    print()
+
+    print("Dernières séances :")
+
+    for workout in workouts:
+
+        print(
+            f"- {workout['title']} | {workout['start_time']}"
+        )
+
+
+if __name__ == "__main__":
+    main()
