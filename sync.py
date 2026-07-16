@@ -1,8 +1,16 @@
 import os
+import requests
 
-api_key = os.getenv("HEVY_API_KEY")
+API_KEY = os.getenv("HEVY_API_KEY")
 
-if api_key:
-    print("✅ Clé API trouvée.")
-else:
-    raise Exception("❌ La clé API HEVY_API_KEY est introuvable.")
+headers = {
+    "api-key": API_KEY,
+    "accept": "application/json"
+}
+
+url = "https://api.hevyapp.com/v1/workouts?page=1&pageSize=5"
+
+response = requests.get(url, headers=headers)
+
+print("Status :", response.status_code)
+print(response.text)
