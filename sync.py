@@ -217,31 +217,7 @@ def main():
     print("=" * 50)
     print()
 
-    all_workouts = []
-
-    page = 1
-    total_pages = None
-
-    while True:
-
-        log(f"Lecture page {page}")
-
-        data = get_workouts(page)
-
-        workouts = data.get("workouts", [])
-
-        if total_pages is None:
-            total_pages = data.get("page_count", 1)
-            log(f"{total_pages} pages détectées")
-
-        log(f"{len(workouts)} séances")
-
-        all_workouts.extend(workouts)
-
-        if page >= total_pages:
-            break
-
-        page += 1
+    all_workouts = download_all_workouts()
 
 # ==========================================================
     # Sauvegarde des données brutes
