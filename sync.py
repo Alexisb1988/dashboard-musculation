@@ -169,6 +169,26 @@ def download_all_workouts():
 
 
 # ==========================================================
+# Construction de l'index des exercices
+# ==========================================================
+
+def build_exercise_index(workouts):
+    """
+    Construit un index des exercices présents dans les séances.
+
+    L'index est basé sur exercise_template_id afin d'être
+    indépendant du nom affiché dans Hevy.
+
+    Cette première version ne calcule que les informations
+    générales. Les statistiques avancées seront ajoutées
+    progressivement.
+    """
+
+    exercise_index = {}
+
+    return exercise_index
+
+# ==========================================================
 # Filtrage des séances
 # ==========================================================
 
