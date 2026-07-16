@@ -63,7 +63,64 @@ def save_json(data, filename):
             indent=2,
             ensure_ascii=False
         )
+# ==========================================================
+# Création du fichier metadata.json
+# ==========================================================
 
+def save_metadata(
+    downloaded_count,
+    kept_count,
+    ignored_count,
+    workouts
+):
+    """
+    Crée le fichier metadata.json.
+
+    Ce fichier permettra plus tard de savoir :
+
+    - quand la dernière synchronisation a eu lieu
+    - combien de séances existent
+    - quelle est la première séance
+    - quelle est la dernière séance
+    """
+
+    if len(workouts) == 0:
+
+        first_workout = None
+        last_workout = None
+
+    else:
+
+        dates = sorted([
+            workout["start_time"]
+            for workout in workouts
+        ])
+
+        first_workout = dates[0]
+        last_workout = dates[-1]
+
+    metadata = {
+
+        "version": "0.2.3",
+
+        "last_sync": datetime.utcnow().isoformat(),
+
+        "downloaded_workouts": downloaded_count,
+
+        "kept_workouts": kept_count,
+
+        "ignored_workouts": ignored_count,
+
+        "first_workout": first_workout,
+
+        "last_workout": last_workout
+
+    }
+
+    save_json(
+        metadata,
+        "metadata.json"
+    )
 # ==========================================================
 # Filtrage des séances
 # ==========================================================
