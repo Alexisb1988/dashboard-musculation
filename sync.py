@@ -103,7 +103,7 @@ def save_metadata(
 
         "version": "0.2.3",
 
-        "last_sync": datetime.utcnow().isoformat(),
+        "last_sync": datetime.now().astimezone().isoformat(),
 
         "downloaded_workouts": downloaded_count,
 
