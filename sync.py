@@ -71,7 +71,13 @@ def main():
 
     print("Connexion à Hevy...")
 
-    data = get_workouts()
+    all_workouts = []
+
+    page = 1
+
+    while True:
+
+    data = get_workouts(page)
 
     workouts = data.get("workouts", [])
 
