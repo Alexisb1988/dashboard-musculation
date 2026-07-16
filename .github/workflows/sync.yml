@@ -1,0 +1,17 @@
+name: Synchronisation Hevy
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 * * * *'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Vérification
+        run: echo "Le workflow fonctionne !"
