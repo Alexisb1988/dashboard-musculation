@@ -186,6 +186,52 @@ def build_exercise_index(workouts):
 
     exercise_index = {}
 
+    for workout in workouts:
+
+        workout_id = workout.get("id")
+        workout_date = workout.get("start_time")
+
+        for exercise in workout.get("exercises", []):
+
+            template_id = exercise.get("exercise_template_id")
+
+            # Les exercices personnalisés peuvent ne pas avoir
+            # d'identifiant de template.
+            if template_id is None:
+                continue
+
+            if template_id not in exercise_index:
+
+                exercise_index[template_id] = {
+
+                    "template_id": template_id,
+
+                    "name": exercise.get("title"),
+
+                    "workout_count": 0,
+
+                    "set_count": 0,
+
+                    "first_seen": workout_date,
+
+                    "last_seen": workout_date,
+
+                    "workout_ids": []
+
+                }
+
+            current = exercise_index[template_id]
+
+            current["workout_count"] += 1
+
+            current["set_count"] += len(
+                exercise.get("sets", [])
+            )
+
+            current["last_seen"] = workout_date
+
+            current["workout_ids"].append(workout_id)
+
     return exercise_index
 
 # ==========================================================
