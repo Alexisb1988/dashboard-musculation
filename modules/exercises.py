@@ -56,12 +56,36 @@ def build_exercise_index(workouts):
                     "last_seen": workout_date,
 
                     "workout_ids": []
+
+                    "rep_count": 0,
+                    "total_volume": 0,
+                    "max_weight": 0,
+                    "max_reps": 0,
+                    "max_set_volume": 0,
                 }
 
             current = exercise_index[exercise_key]
 
             current["workout_count"] += 1
             current["set_count"] += len(exercise.get("sets", []))
+            for current_set in exercise.get("sets", []):
+
+                weight = current_set.get("weight_kg") or 0
+                reps = current_set.get("reps") or 0
+            
+                current["rep_count"] += reps
+            
+                volume = weight * reps
+                current["total_volume"] += volume
+            
+                if weight > current["max_weight"]:
+                    current["max_weight"] = weight
+            
+                if reps > current["max_reps"]:
+                    current["max_reps"] = reps
+            
+                if volume > current["max_set_volume"]:
+                    current["max_set_volume"] = volume
 
             if workout_date < current["first_seen"]:
                 current["first_seen"] = workout_date
@@ -129,7 +153,23 @@ def calculate_exercise_statistics(exercise_index):
 
     for exercise in exercise_index.values():
 
-        exercise["history_count"] = len(exercise["workout_ids"])
+    exercise["history_count"] = len(exercise["workout_ids"])
+
+    if exercise["rep_count"] > 0:
+        exercise["average_weight"] = (
+            exercise["total_volume"]
+            / exercise["rep_count"]
+        )
+    else:
+        exercise["average_weight"] = 0
+
+    if exercise["set_count"] > 0:
+        exercise["average_reps"] = (
+            exercise["rep_count"]
+            / exercise["set_count"]
+        )
+    else:
+        exercise["average_reps"] = 0
 
 # ==========================================================
 # Sauvegarde
