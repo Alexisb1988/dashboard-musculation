@@ -96,7 +96,10 @@ def main():
     calculate_exercise_statistics(exercise_index)
 
     global_statistics = calculate_global_statistics(filtered_workouts)
-
+    print()
+    print("===== Global statistics =====")
+    print(global_statistics)
+    
     save_json(
     global_statistics,
     "global_statistics.json"
