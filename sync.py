@@ -10,7 +10,6 @@ Cette version :
 La prochaine étape filtrera les séances avant le 01/01/2026.
 """
 
-
 import math
 from datetime import datetime
 from modules.statistics import calculate_global_statistics
@@ -26,6 +25,7 @@ from modules.filter import filter_workouts
 
 from modules.exercises import (
     build_exercise_index,
+    calculate_exercise_statistics,
     get_exercise_history,
     save_exercise_database
 )
@@ -41,7 +41,7 @@ MIN_DATE = datetime(2026, 1, 1)
 # ==========================================================
 # Programme principal
 # ==========================================================
-    
+
 def main():
 
     print("=" * 50)
@@ -96,20 +96,15 @@ def main():
     calculate_exercise_statistics(exercise_index)
 
     global_statistics = calculate_global_statistics(filtered_workouts)
-    print()
-    print("===== Global statistics =====")
-    print(global_statistics)
-    
+
     save_json(
-    global_statistics,
-    "global_statistics.json"
+        global_statistics,
+        "global_statistics.json"
     )
 
     save_exercise_database(
         exercise_index
     )
-
-    
 
     log(f"{len(exercise_index)} exercices uniques détectés")
     log("exercise_database.json généré")
@@ -136,7 +131,6 @@ def main():
     log(f"{ignored_count} séances ignorées")
 
     print("=" * 50)
-
 
 
 if __name__ == "__main__":
