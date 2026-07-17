@@ -210,19 +210,19 @@ def save_exercise_database(exercise_index):
         exercise_index,
         "exercise_database.json"
     )
-    # ==========================================================
-    # Programme principal
-    # ==========================================================
+# ==========================================================
+# Programme principal
+# ==========================================================
     
-    def main():
+ def main():
     
-        print("=" * 50)
-        print("Dashboard Musculation")
-        print("Version 0.2.1")
-        print("=" * 50)
-        print()
+    print("=" * 50)
+    print("Dashboard Musculation")
+    print("Version 0.2.1")
+    print("=" * 50)
+    print()
     
-        all_workouts = download_all_workouts()
+    all_workouts = download_all_workouts()
 
     # ==========================================================
     # Sauvegarde des données brutes
