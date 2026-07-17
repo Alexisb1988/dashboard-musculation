@@ -17,6 +17,7 @@ from datetime import datetime
 
 from modules.api import get_workouts
 from modules.utils import log
+from modules.workouts import download_all_workouts
 
 # ==========================================================
 # Configuration
@@ -94,51 +95,6 @@ def save_metadata(
         metadata,
         "metadata.json"
     )
-
-
-# ==========================================================
-# Téléchargement des séances
-# ==========================================================
-
-def download_all_workouts():
-    """
-    Télécharge toutes les séances disponibles sur Hevy.
-
-    Retour
-    ------
-    list
-        Liste complète des séances.
-    """
-
-    all_workouts = []
-
-    page = 1
-    total_pages = None
-
-    while True:
-
-        log(f"Lecture page {page}")
-
-        data = get_workouts(page)
-
-        workouts = data.get("workouts", [])
-
-        if total_pages is None:
-
-            total_pages = data.get("page_count", 1)
-
-            log(f"{total_pages} pages détectées")
-
-        log(f"{len(workouts)} séances")
-
-        all_workouts.extend(workouts)
-
-        if page >= total_pages:
-            break
-
-        page += 1
-
-    return all_workouts
 
 
 # ==========================================================
