@@ -55,7 +55,7 @@ def build_exercise_index(workouts):
                     "first_seen": workout_date,
                     "last_seen": workout_date,
 
-                    "workout_ids": []
+                    "workout_ids": [],
 
                     "rep_count": 0,
                     "total_volume": 0,
@@ -153,23 +153,23 @@ def calculate_exercise_statistics(exercise_index):
 
     for exercise in exercise_index.values():
 
-    exercise["history_count"] = len(exercise["workout_ids"])
+        exercise["history_count"] = len(exercise["workout_ids"])
 
-    if exercise["rep_count"] > 0:
-        exercise["average_weight"] = (
-            exercise["total_volume"]
-            / exercise["rep_count"]
-        )
-    else:
-        exercise["average_weight"] = 0
+        if exercise["rep_count"] > 0:
+            exercise["average_weight"] = (
+                exercise["total_volume"]
+                / exercise["rep_count"]
+            )
+        else:
+            exercise["average_weight"] = 0
 
-    if exercise["set_count"] > 0:
-        exercise["average_reps"] = (
-            exercise["rep_count"]
-            / exercise["set_count"]
-        )
-    else:
-        exercise["average_reps"] = 0
+        if exercise["set_count"] > 0:
+            exercise["average_reps"] = (
+                exercise["rep_count"]
+                / exercise["set_count"]
+            )
+        else:
+            exercise["average_reps"] = 0
 
 # ==========================================================
 # Sauvegarde
