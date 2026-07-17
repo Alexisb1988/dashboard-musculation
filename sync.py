@@ -30,13 +30,6 @@ from modules.exercises import (
     save_exercise_database
 )
 
-from modules.exercises import (
-    build_exercise_index,
-    get_exercise_history,
-    calculate_exercise_statistics,
-    
-)
-
 # ==========================================================
 # Configuration
 # ==========================================================
