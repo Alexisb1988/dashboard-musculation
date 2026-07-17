@@ -10,14 +10,14 @@ Cette version :
 La prochaine étape filtrera les séances avant le 01/01/2026.
 """
 
-import json
+
 import math
-from pathlib import Path
 from datetime import datetime
 
 from modules.api import get_workouts
 from modules.utils import log
 from modules.workouts import download_all_workouts
+from modules.database import save_json
 
 # ==========================================================
 # Configuration
@@ -26,17 +26,6 @@ from modules.workouts import download_all_workouts
 # Date minimale des séances conservées
 MIN_DATE = datetime(2026, 1, 1)
 
-def save_json(data, filename):
-
-    Path("data").mkdir(exist_ok=True)
-
-    with open(f"data/{filename}", "w", encoding="utf-8") as file:
-        json.dump(
-            data,
-            file,
-            indent=2,
-            ensure_ascii=False
-        )
 # ==========================================================
 # Création du fichier metadata.json
 # ==========================================================
