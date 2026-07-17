@@ -12,6 +12,8 @@ import json
 
 def save_json(data, filename):
 
+    print(f"Je sauvegarde : {filename}")
+
     with open(
         filename,
         "w",
