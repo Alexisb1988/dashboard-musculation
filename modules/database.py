@@ -10,12 +10,15 @@ import json
 # Sauvegarde JSON
 # ==========================================================
 
+import os
+
+
 def save_json(data, filename):
 
-    print(f"Je sauvegarde : {filename}")
+    filepath = os.path.join("data", filename)
 
     with open(
-        filename,
+        filepath,
         "w",
         encoding="utf-8"
     ) as file:
@@ -26,7 +29,6 @@ def save_json(data, filename):
             indent=4,
             ensure_ascii=False
         )
-
 
 # ==========================================================
 # Métadonnées
