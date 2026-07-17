@@ -18,6 +18,7 @@ from modules.api import get_workouts
 from modules.utils import log
 from modules.workouts import download_all_workouts
 from modules.database import save_json
+from modules.filter import filter_workouts
 
 # ==========================================================
 # Configuration
