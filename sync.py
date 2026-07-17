@@ -29,6 +29,13 @@ from modules.exercises import (
     save_exercise_database
 )
 
+from modules.exercises import (
+    build_exercise_index,
+    get_exercise_history,
+    calculate_exercise_statistics,
+    save_exercise_database
+)
+
 # ==========================================================
 # Configuration
 # ==========================================================
@@ -92,6 +99,10 @@ def main():
 
     exercise_index = build_exercise_index(
         filtered_workouts
+    )
+
+    calculate_exercise_statistics(
+        exercise_index
     )
 
     save_exercise_database(
