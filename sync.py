@@ -13,6 +13,7 @@ La prochaine étape filtrera les séances avant le 01/01/2026.
 
 import math
 from datetime import datetime
+from modules.statistics import calculate_global_statistics
 
 from modules.api import get_workouts
 from modules.utils import log
@@ -33,7 +34,7 @@ from modules.exercises import (
     build_exercise_index,
     get_exercise_history,
     calculate_exercise_statistics,
-    save_exercise_database
+    
 )
 
 # ==========================================================
@@ -107,6 +108,13 @@ def main():
 
     save_exercise_database(
         exercise_index
+    )
+
+    global_statistics = calculate_global_statistics(filtered_workouts)
+
+    save_json(
+        global_statistics,
+        "global_statistics.json"
     )
 
     log(f"{len(exercise_index)} exercices uniques détectés")
