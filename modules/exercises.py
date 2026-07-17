@@ -71,9 +71,7 @@ def build_exercise_index(workouts):
 
             current["workout_ids"].append(workout_id)
 
-    # Informations calculées
-    for exercise in exercise_index.values():
-        exercise["history_count"] = len(exercise["workout_ids"])
+
 
     return exercise_index
 
@@ -120,7 +118,18 @@ def get_exercise_history(workouts, exercise_id):
     history.sort(key=lambda x: x["date"])
 
     return history
+# ==========================================================
+# Statistiques
+# ==========================================================
 
+def calculate_exercise_statistics(exercise_index):
+    """
+    Calcule les statistiques globales de chaque exercice.
+    """
+
+    for exercise in exercise_index.values():
+
+        exercise["history_count"] = len(exercise["workout_ids"])
 
 # ==========================================================
 # Sauvegarde
