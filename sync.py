@@ -18,6 +18,8 @@ from datetime import datetime
 
 import requests
 
+from modules.utils import log
+
 BASE_URL = "https://api.hevyapp.com/v1"
 API_KEY = os.getenv("HEVY_API_KEY")
 
@@ -31,9 +33,6 @@ HEADERS = {
 
 # Date minimale des séances conservées
 MIN_DATE = datetime(2026, 1, 1)
-
-def log(message):
-    print(f"[INFO] {message}")
 
 
 def get_workouts(page=1, page_size=5):
