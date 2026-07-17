@@ -12,6 +12,12 @@ from modules.database import save_json
 def build_exercise_index(workouts):
     """
     Construit un index des exercices présents dans les séances.
+
+    Les exercices officiels sont indexés grâce à leur
+    exercise_template_id.
+
+    Les exercices personnalisés sont également conservés et
+    indexés grâce à leur nom.
     """
 
     exercise_index = {}
@@ -24,23 +30,35 @@ def build_exercise_index(workouts):
         for exercise in workout.get("exercises", []):
 
             template_id = exercise.get("exercise_template_id")
+            title = exercise.get("title")
 
-            if template_id is None:
-                continue
+            # Clé interne unique
+            if template_id is not None:
+                exercise_key = f"template_{template_id}"
+                is_custom = False
+            else:
+                exercise_key = f"custom_{title}"
+                is_custom = True
 
-            if template_id not in exercise_index:
+            if exercise_key not in exercise_index:
 
-                exercise_index[template_id] = {
+                exercise_index[exercise_key] = {
+                    "id": exercise_key,
                     "template_id": template_id,
-                    "name": exercise.get("title"),
+                    "name": title,
+
+                    "is_custom": is_custom,
+
                     "workout_count": 0,
                     "set_count": 0,
+
                     "first_seen": workout_date,
                     "last_seen": workout_date,
+
                     "workout_ids": []
                 }
 
-            current = exercise_index[template_id]
+            current = exercise_index[exercise_key]
 
             current["workout_count"] += 1
             current["set_count"] += len(exercise.get("sets", []))
@@ -53,6 +71,10 @@ def build_exercise_index(workouts):
 
             current["workout_ids"].append(workout_id)
 
+    # Informations calculées
+    for exercise in exercise_index.values():
+        exercise["history_count"] = len(exercise["workout_ids"])
+
     return exercise_index
 
 
@@ -60,7 +82,11 @@ def build_exercise_index(workouts):
 # Historique
 # ==========================================================
 
-def get_exercise_history(workouts, template_id):
+def get_exercise_history(workouts, exercise_id):
+    """
+    Retourne toutes les occurrences d'un exercice,
+    classées par date.
+    """
 
     history = []
 
@@ -70,7 +96,15 @@ def get_exercise_history(workouts, template_id):
 
         for exercise in workout.get("exercises", []):
 
-            if exercise.get("exercise_template_id") != template_id:
+            template_id = exercise.get("exercise_template_id")
+            title = exercise.get("title")
+
+            if template_id is not None:
+                current_id = f"template_{template_id}"
+            else:
+                current_id = f"custom_{title}"
+
+            if current_id != exercise_id:
                 continue
 
             history.append(
@@ -78,7 +112,7 @@ def get_exercise_history(workouts, template_id):
                     "date": workout_date,
                     "workout_id": workout.get("id"),
                     "workout_title": workout.get("title"),
-                    "exercise_name": exercise.get("title"),
+                    "exercise_name": title,
                     "sets": exercise.get("sets", [])
                 }
             )
@@ -93,6 +127,9 @@ def get_exercise_history(workouts, template_id):
 # ==========================================================
 
 def save_exercise_database(exercise_index):
+    """
+    Sauvegarde la base des exercices.
+    """
 
     save_json(
         exercise_index,
