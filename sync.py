@@ -98,24 +98,22 @@ def main():
     # Construction de l'index des exercices
     # ==========================================================
 
-    exercise_index = build_exercise_index(
-        filtered_workouts
-    )
+    exercise_index = build_exercise_index(filtered_workouts)
 
-    calculate_exercise_statistics(
-        exercise_index
+    calculate_exercise_statistics(exercise_index)
+
+    global_statistics = calculate_global_statistics(filtered_workouts)
+
+    save_json(
+    global_statistics,
+    "global_statistics.json"
     )
 
     save_exercise_database(
         exercise_index
     )
 
-    global_statistics = calculate_global_statistics(filtered_workouts)
-
-    save_json(
-        global_statistics,
-        "global_statistics.json"
-    )
+    
 
     log(f"{len(exercise_index)} exercices uniques détectés")
     log("exercise_database.json généré")
