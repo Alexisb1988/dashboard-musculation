@@ -214,93 +214,93 @@ def save_exercise_database(exercise_index):
 # Programme principal
 # ==========================================================
     
- def main():
-    
-    print("=" * 50)
-    print("Dashboard Musculation")
-    print("Version 0.2.1")
-    print("=" * 50)
-    print()
-    
-    all_workouts = download_all_workouts()
+def main():
 
-    # ==========================================================
-    # Sauvegarde des données brutes
-    # ==========================================================
+print("=" * 50)
+print("Dashboard Musculation")
+print("Version 0.2.1")
+print("=" * 50)
+print()
 
-    raw_data = {
-        "workouts": all_workouts,
-        "count": len(all_workouts)
-    }
+all_workouts = download_all_workouts()
 
-    save_json(raw_data, "hevy_raw.json")
+# ==========================================================
+# Sauvegarde des données brutes
+# ==========================================================
 
-    # ==========================================================
-    # Création de la base de données filtrée
-    # ==========================================================
+raw_data = {
+    "workouts": all_workouts,
+    "count": len(all_workouts)
+}
 
-    filtered_workouts, ignored_count = filter_workouts(all_workouts)
+save_json(raw_data, "hevy_raw.json")
 
-    database = {
-        "workouts": filtered_workouts,
-        "count": len(filtered_workouts)
-    }
+# ==========================================================
+# Création de la base de données filtrée
+# ==========================================================
 
-    save_json(database, "hevy_database.json")
+filtered_workouts, ignored_count = filter_workouts(all_workouts)
 
-     # ==========================================================
-    # Sauvegarde des métadonnées
-    # ==========================================================
+database = {
+    "workouts": filtered_workouts,
+    "count": len(filtered_workouts)
+}
 
-    save_metadata(
-        downloaded_count=len(all_workouts),
-        kept_count=len(filtered_workouts),
-        ignored_count=ignored_count,
-        workouts=filtered_workouts
+save_json(database, "hevy_database.json")
+
+ # ==========================================================
+# Sauvegarde des métadonnées
+# ==========================================================
+
+save_metadata(
+    downloaded_count=len(all_workouts),
+    kept_count=len(filtered_workouts),
+    ignored_count=ignored_count,
+    workouts=filtered_workouts
+)
+
+# ==========================================================
+# Construction de l'index des exercices
+# ==========================================================
+exercise_index = build_exercise_index(
+    filtered_workouts
+)
+
+save_exercise_database(
+exercise_index
+)
+
+log(
+    f"{len(exercise_index)} exercices uniques détectés"
+)
+log(
+"exercise_database.json généré"
+)
+
+print()
+
+print("===== Liste des exercices =====")
+
+for exercise in sorted(
+    exercise_index.values(),
+    key=lambda x: x["name"]
+):
+
+    print(
+        f'{exercise["name"]:<45} {exercise["workout_count"]:>3} séances'
     )
-    
-    # ==========================================================
-    # Construction de l'index des exercices
-    # ==========================================================
-    exercise_index = build_exercise_index(
-        filtered_workouts
-    )
 
-    save_exercise_database(
-    exercise_index
-    )
-    
-    log(
-        f"{len(exercise_index)} exercices uniques détectés"
-    )
-    log(
-    "exercise_database.json généré"
-    )
-    
-    print()
-    
-    print("===== Liste des exercices =====")
-    
-    for exercise in sorted(
-        exercise_index.values(),
-        key=lambda x: x["name"]
-    ):
-    
-        print(
-            f'{exercise["name"]:<45} {exercise["workout_count"]:>3} séances'
-        )
-    
-    print("===============================")
-    
-    print()
-    print("=" * 50)
-    
-    log("Import terminé")
-    log(f"{len(all_workouts)} séances téléchargées")
-    log(f"{len(filtered_workouts)} séances conservées")
-    log(f"{ignored_count} séances ignorées")
-    
-    print("=" * 50)
+print("===============================")
+
+print()
+print("=" * 50)
+
+log("Import terminé")
+log(f"{len(all_workouts)} séances téléchargées")
+log(f"{len(filtered_workouts)} séances conservées")
+log(f"{ignored_count} séances ignorées")
+
+print("=" * 50)
 
 
 
