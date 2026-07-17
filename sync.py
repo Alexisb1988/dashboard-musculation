@@ -12,44 +12,18 @@ La prochaine étape filtrera les séances avant le 01/01/2026.
 
 import json
 import math
-import os
 from pathlib import Path
 from datetime import datetime
 
-import requests
-
+from modules.api import get_workouts
 from modules.utils import log
 
-BASE_URL = "https://api.hevyapp.com/v1"
-API_KEY = os.getenv("HEVY_API_KEY")
-
-HEADERS = {
-    "api-key": API_KEY,
-    "accept": "application/json"
-}
 # ==========================================================
 # Configuration
 # ==========================================================
 
 # Date minimale des séances conservées
 MIN_DATE = datetime(2026, 1, 1)
-
-
-def get_workouts(page=1, page_size=5):
-
-    response = requests.get(
-        f"{BASE_URL}/workouts",
-        headers=HEADERS,
-        params={
-            "page": page,
-            "pageSize": page_size
-        }
-    )
-
-    response.raise_for_status()
-
-    return response.json()
-
 
 def save_json(data, filename):
 
