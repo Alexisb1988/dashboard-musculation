@@ -17,7 +17,10 @@ from datetime import datetime
 from modules.api import get_workouts
 from modules.utils import log
 from modules.workouts import download_all_workouts
-from modules.database import save_json
+from modules.database import (
+    save_json,
+    save_metadata
+)
 from modules.filter import filter_workouts
 
 from modules.exercises import (
@@ -32,65 +35,6 @@ from modules.exercises import (
 
 # Date minimale des séances conservées
 MIN_DATE = datetime(2026, 1, 1)
-
-# ==========================================================
-# Création du fichier metadata.json
-# ==========================================================
-
-def save_metadata(
-    downloaded_count,
-    kept_count,
-    ignored_count,
-    workouts
-):
-    """
-    Crée le fichier metadata.json.
-
-    Ce fichier permettra plus tard de savoir :
-
-    - quand la dernière synchronisation a eu lieu
-    - combien de séances existent
-    - quelle est la première séance
-    - quelle est la dernière séance
-    """
-
-    if len(workouts) == 0:
-
-        first_workout = None
-        last_workout = None
-
-    else:
-
-        dates = sorted([
-            workout["start_time"]
-            for workout in workouts
-        ])
-
-        first_workout = dates[0]
-        last_workout = dates[-1]
-
-    metadata = {
-
-        "version": "0.2.3",
-
-        "last_sync": datetime.now().astimezone().isoformat(),
-
-        "downloaded_workouts": downloaded_count,
-
-        "kept_workouts": kept_count,
-
-        "ignored_workouts": ignored_count,
-
-        "first_workout": first_workout,
-
-        "last_workout": last_workout
-
-    }
-
-    save_json(
-        metadata,
-        "metadata.json"
-    )
 
 
 # ==========================================================
