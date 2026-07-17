@@ -1,3 +1,8 @@
+from datetime import datetime
+
+# Date minimale des séances conservées
+MIN_DATE = datetime(2026, 1, 1)
+
 # ==========================================================
 # Filtrage des séances
 # ==========================================================
@@ -38,13 +43,3 @@ def filter_workouts(workouts):
             ignored_count += 1
 
     return kept_workouts, ignored_count
-    
-def main():
-
-    print("=" * 50)
-    print("Dashboard Musculation")
-    print("Version 0.2.1")
-    print("=" * 50)
-    print()
-
-    all_workouts = download_all_workouts()
