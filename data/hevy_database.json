@@ -1,6 +1,310 @@
 {
     "workouts": [
         {
+            "id": "44d0a1e4-e761-4a66-8c20-0eea2147d695",
+            "title": "Cycle 8 : J2",
+            "routine_id": "583aee15-d57c-4638-8225-675ae96a8c41",
+            "description": "",
+            "start_time": "2026-07-21T04:34:26+00:00",
+            "end_time": "2026-07-21T05:47:12+00:00",
+            "updated_at": "2026-07-21T05:47:15.710Z",
+            "created_at": "2026-07-21T05:47:15.710Z",
+            "exercises": [
+                {
+                    "index": 0,
+                    "title": "Échauffement",
+                    "notes": "",
+                    "exercise_template_id": "79EF4E4F",
+                    "superset_id": null,
+                    "sets": [
+                        {
+                            "index": 0,
+                            "type": "normal",
+                            "weight_kg": null,
+                            "reps": null,
+                            "distance_meters": null,
+                            "duration_seconds": 300,
+                            "rpe": null,
+                            "custom_metric": null
+                        }
+                    ]
+                },
+                {
+                    "index": 1,
+                    "title": "Soulevé de Terre (Machine Smith)",
+                    "notes": "",
+                    "exercise_template_id": "20870ED5",
+                    "superset_id": null,
+                    "sets": [
+                        {
+                            "index": 0,
+                            "type": "warmup",
+                            "weight_kg": 40,
+                            "reps": 8,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": null,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 1,
+                            "type": "normal",
+                            "weight_kg": 65,
+                            "reps": 15,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 7.5,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 2,
+                            "type": "normal",
+                            "weight_kg": 65,
+                            "reps": 15,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 7.5,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 3,
+                            "type": "normal",
+                            "weight_kg": 65,
+                            "reps": 15,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 8,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 4,
+                            "type": "normal",
+                            "weight_kg": 65,
+                            "reps": 15,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 8.5,
+                            "custom_metric": null
+                        }
+                    ]
+                },
+                {
+                    "index": 2,
+                    "title": "Pulldown",
+                    "notes": "",
+                    "exercise_template_id": "d93138ca-7f96-410e-bff2-f520db3458c5",
+                    "superset_id": null,
+                    "sets": [
+                        {
+                            "index": 0,
+                            "type": "normal",
+                            "weight_kg": 95,
+                            "reps": 15,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 8,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 1,
+                            "type": "normal",
+                            "weight_kg": 95,
+                            "reps": 13,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 8.5,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 2,
+                            "type": "normal",
+                            "weight_kg": 95,
+                            "reps": 11,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 3,
+                            "type": "normal",
+                            "weight_kg": 95,
+                            "reps": 10,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9.5,
+                            "custom_metric": null
+                        }
+                    ]
+                },
+                {
+                    "index": 3,
+                    "title": "Butterfly (Pec Deck)",
+                    "notes": "",
+                    "exercise_template_id": "9DCE2D64",
+                    "superset_id": null,
+                    "sets": [
+                        {
+                            "index": 0,
+                            "type": "normal",
+                            "weight_kg": 77.5,
+                            "reps": 15,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 8.5,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 1,
+                            "type": "normal",
+                            "weight_kg": 77.5,
+                            "reps": 12,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 2,
+                            "type": "normal",
+                            "weight_kg": 75,
+                            "reps": 10,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9,
+                            "custom_metric": null
+                        }
+                    ]
+                },
+                {
+                    "index": 4,
+                    "title": "Adduction Hanche",
+                    "notes": "",
+                    "exercise_template_id": "8BEBFED6",
+                    "superset_id": null,
+                    "sets": [
+                        {
+                            "index": 0,
+                            "type": "normal",
+                            "weight_kg": 80,
+                            "reps": 12,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 8.5,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 1,
+                            "type": "normal",
+                            "weight_kg": 80,
+                            "reps": 11,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 2,
+                            "type": "normal",
+                            "weight_kg": 80,
+                            "reps": 8,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9.5,
+                            "custom_metric": null
+                        }
+                    ]
+                },
+                {
+                    "index": 5,
+                    "title": "Curl Pupitre (Machine)",
+                    "notes": "",
+                    "exercise_template_id": "1E9A6B8E",
+                    "superset_id": null,
+                    "sets": [
+                        {
+                            "index": 0,
+                            "type": "normal",
+                            "weight_kg": 22.5,
+                            "reps": 15,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 7.5,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 1,
+                            "type": "normal",
+                            "weight_kg": 22.5,
+                            "reps": 13,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 8.5,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 2,
+                            "type": "normal",
+                            "weight_kg": 22.5,
+                            "reps": 11,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9,
+                            "custom_metric": null
+                        }
+                    ]
+                },
+                {
+                    "index": 6,
+                    "title": "L Fly",
+                    "notes": "",
+                    "exercise_template_id": "c984d240-0d79-47db-8e4f-5b8272a18b27",
+                    "superset_id": null,
+                    "sets": [
+                        {
+                            "index": 0,
+                            "type": "normal",
+                            "weight_kg": 10,
+                            "reps": 15,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": null,
+                            "custom_metric": null
+                        }
+                    ]
+                },
+                {
+                    "index": 7,
+                    "title": "Pallof Press",
+                    "notes": "",
+                    "exercise_template_id": "f5002d43-f272-4605-9b0c-8a3902699705",
+                    "superset_id": null,
+                    "sets": [
+                        {
+                            "index": 0,
+                            "type": "normal",
+                            "weight_kg": 12.5,
+                            "reps": null,
+                            "distance_meters": null,
+                            "duration_seconds": 45,
+                            "rpe": null,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 1,
+                            "type": "normal",
+                            "weight_kg": 12.5,
+                            "reps": null,
+                            "distance_meters": null,
+                            "duration_seconds": 45,
+                            "rpe": null,
+                            "custom_metric": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "id": "28e2fabc-5fce-4772-a459-19b8a2153530",
             "title": "Cycle 8 : J1 - Full body",
             "routine_id": "2aeb6e27-72bc-4091-a621-a5987c83058a",
@@ -37620,5 +37924,5 @@
             ]
         }
     ],
-    "count": 105
+    "count": 106
 }
