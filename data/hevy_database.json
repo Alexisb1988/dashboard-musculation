@@ -1,6 +1,300 @@
 {
     "workouts": [
         {
+            "id": "e339f8b3-32a8-4346-af50-1ba6d193418d",
+            "title": "Cycle 8 : J5",
+            "routine_id": "2cad9945-81d2-4142-ab14-e1720b8cc7e6",
+            "description": "",
+            "start_time": "2026-07-24T04:35:58+00:00",
+            "end_time": "2026-07-24T05:44:22+00:00",
+            "updated_at": "2026-07-24T05:44:23.778Z",
+            "created_at": "2026-07-24T05:44:23.778Z",
+            "exercises": [
+                {
+                    "index": 0,
+                    "title": "Échauffement",
+                    "notes": "",
+                    "exercise_template_id": "79EF4E4F",
+                    "superset_id": null,
+                    "sets": [
+                        {
+                            "index": 0,
+                            "type": "normal",
+                            "weight_kg": null,
+                            "reps": null,
+                            "distance_meters": null,
+                            "duration_seconds": 300,
+                            "rpe": null,
+                            "custom_metric": null
+                        }
+                    ]
+                },
+                {
+                    "index": 1,
+                    "title": "Split Squat Bulgare",
+                    "notes": "Nombre de rep total (somme des deux côtés)",
+                    "exercise_template_id": "B5D3A742",
+                    "superset_id": null,
+                    "sets": [
+                        {
+                            "index": 0,
+                            "type": "normal",
+                            "weight_kg": 30,
+                            "reps": 24,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 7.5,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 1,
+                            "type": "normal",
+                            "weight_kg": 30,
+                            "reps": 24,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 8.5,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 2,
+                            "type": "normal",
+                            "weight_kg": 30,
+                            "reps": 20,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 8.5,
+                            "custom_metric": null
+                        }
+                    ]
+                },
+                {
+                    "index": 2,
+                    "title": "Chest Press Incliné (Machine)",
+                    "notes": "",
+                    "exercise_template_id": "FBF92739",
+                    "superset_id": null,
+                    "sets": [
+                        {
+                            "index": 0,
+                            "type": "normal",
+                            "weight_kg": 70,
+                            "reps": 13,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 1,
+                            "type": "normal",
+                            "weight_kg": 70,
+                            "reps": 10,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 8.5,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 2,
+                            "type": "normal",
+                            "weight_kg": 70,
+                            "reps": 8,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9,
+                            "custom_metric": null
+                        }
+                    ]
+                },
+                {
+                    "index": 3,
+                    "title": "Tirage Corde Bras Tendus",
+                    "notes": "",
+                    "exercise_template_id": "9273BA17",
+                    "superset_id": null,
+                    "sets": [
+                        {
+                            "index": 0,
+                            "type": "normal",
+                            "weight_kg": 30,
+                            "reps": 13,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 8,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 1,
+                            "type": "normal",
+                            "weight_kg": 30,
+                            "reps": 12,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 2,
+                            "type": "normal",
+                            "weight_kg": 27.5,
+                            "reps": 12,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9,
+                            "custom_metric": null
+                        }
+                    ]
+                },
+                {
+                    "index": 4,
+                    "title": "Curl Concentré",
+                    "notes": "",
+                    "exercise_template_id": "724CDE60",
+                    "superset_id": null,
+                    "sets": [
+                        {
+                            "index": 0,
+                            "type": "normal",
+                            "weight_kg": 14,
+                            "reps": 14,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 1,
+                            "type": "normal",
+                            "weight_kg": 14,
+                            "reps": 10,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 10,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 2,
+                            "type": "normal",
+                            "weight_kg": 14,
+                            "reps": 8,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 8.5,
+                            "custom_metric": null
+                        }
+                    ]
+                },
+                {
+                    "index": 5,
+                    "title": "Trap-3 Raise",
+                    "notes": "",
+                    "exercise_template_id": "b3131afd-d7b6-405d-a57c-47810d198e32",
+                    "superset_id": null,
+                    "sets": [
+                        {
+                            "index": 0,
+                            "type": "normal",
+                            "weight_kg": 6,
+                            "reps": 13,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 1,
+                            "type": "normal",
+                            "weight_kg": 6,
+                            "reps": 12,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 2,
+                            "type": "normal",
+                            "weight_kg": 6,
+                            "reps": 10,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9,
+                            "custom_metric": null
+                        }
+                    ]
+                },
+                {
+                    "index": 6,
+                    "title": "Extension Triceps Poulie Haute",
+                    "notes": "",
+                    "exercise_template_id": "93A552C6",
+                    "superset_id": null,
+                    "sets": [
+                        {
+                            "index": 0,
+                            "type": "normal",
+                            "weight_kg": 27.5,
+                            "reps": 15,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 7.5,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 1,
+                            "type": "normal",
+                            "weight_kg": 27.5,
+                            "reps": 14,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 8.5,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 2,
+                            "type": "normal",
+                            "weight_kg": 27.5,
+                            "reps": 10,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 8.5,
+                            "custom_metric": null
+                        }
+                    ]
+                },
+                {
+                    "index": 7,
+                    "title": "Flexion Latérale Haltère",
+                    "notes": "",
+                    "exercise_template_id": "a9ccf74b-68b4-4b9c-a02f-e74473c11334",
+                    "superset_id": null,
+                    "sets": [
+                        {
+                            "index": 0,
+                            "type": "normal",
+                            "weight_kg": 20,
+                            "reps": 15,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 8,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 1,
+                            "type": "normal",
+                            "weight_kg": 20,
+                            "reps": 15,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 8.5,
+                            "custom_metric": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "id": "c42fa173-365c-42d6-b245-3fe2348e1a41",
             "title": "Cycle 8 : J4",
             "routine_id": "1a9c75fa-475e-4c70-8eaf-57b9ae2bd05b",
@@ -38533,5 +38827,5 @@
             ]
         }
     ],
-    "count": 108
+    "count": 109
 }
