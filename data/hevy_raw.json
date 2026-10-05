@@ -1,6 +1,291 @@
 {
     "workouts": [
         {
+            "id": "291a2979-61b3-4e92-8fae-421305929af9",
+            "title": "Cycle 8.1 : J1-Full Body",
+            "routine_id": "d8c2a902-9fed-43cb-88f1-b31575cc2186",
+            "description": "",
+            "start_time": "2026-10-05T04:25:31+00:00",
+            "end_time": "2026-10-05T05:31:53+00:00",
+            "updated_at": "2026-10-05T05:31:56.922Z",
+            "created_at": "2026-10-05T05:31:56.922Z",
+            "exercises": [
+                {
+                    "index": 0,
+                    "title": "Échauffement",
+                    "notes": "",
+                    "exercise_template_id": "79EF4E4F",
+                    "superset_id": null,
+                    "sets": [
+                        {
+                            "index": 0,
+                            "type": "normal",
+                            "weight_kg": null,
+                            "reps": null,
+                            "distance_meters": null,
+                            "duration_seconds": 300,
+                            "rpe": null,
+                            "custom_metric": null
+                        }
+                    ]
+                },
+                {
+                    "index": 1,
+                    "title": "Hack Squat (Machine)",
+                    "notes": "",
+                    "exercise_template_id": "1E42FD5F",
+                    "superset_id": null,
+                    "sets": [
+                        {
+                            "index": 0,
+                            "type": "warmup",
+                            "weight_kg": 40,
+                            "reps": 8,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": null,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 1,
+                            "type": "normal",
+                            "weight_kg": 80,
+                            "reps": 12,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 8.5,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 2,
+                            "type": "normal",
+                            "weight_kg": 80,
+                            "reps": 12,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 3,
+                            "type": "normal",
+                            "weight_kg": 80,
+                            "reps": 12,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9.5,
+                            "custom_metric": null
+                        }
+                    ]
+                },
+                {
+                    "index": 2,
+                    "title": "Cable Chest Press",
+                    "notes": "",
+                    "exercise_template_id": "154ab9ca-9a28-42b5-aad7-cabb33a12b51",
+                    "superset_id": null,
+                    "sets": [
+                        {
+                            "index": 0,
+                            "type": "normal",
+                            "weight_kg": 17.5,
+                            "reps": 12,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 8,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 1,
+                            "type": "normal",
+                            "weight_kg": 17.5,
+                            "reps": 12,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 2,
+                            "type": "normal",
+                            "weight_kg": 17.5,
+                            "reps": 11,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9.5,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 3,
+                            "type": "normal",
+                            "weight_kg": 17.5,
+                            "reps": 9,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9.5,
+                            "custom_metric": null
+                        }
+                    ]
+                },
+                {
+                    "index": 3,
+                    "title": "Tirage Corde Bras Tendus",
+                    "notes": "",
+                    "exercise_template_id": "9273BA17",
+                    "superset_id": null,
+                    "sets": [
+                        {
+                            "index": 0,
+                            "type": "normal",
+                            "weight_kg": 32.5,
+                            "reps": 15,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 8,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 1,
+                            "type": "normal",
+                            "weight_kg": 32.5,
+                            "reps": 15,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 2,
+                            "type": "normal",
+                            "weight_kg": 32.5,
+                            "reps": 13,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9.5,
+                            "custom_metric": null
+                        }
+                    ]
+                },
+                {
+                    "index": 4,
+                    "title": "Élévation Latérale Assis (Haltère)",
+                    "notes": "",
+                    "exercise_template_id": "e028bc84-0318-4425-a534-fa0587521a96",
+                    "superset_id": null,
+                    "sets": [
+                        {
+                            "index": 0,
+                            "type": "normal",
+                            "weight_kg": 10,
+                            "reps": 10,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 8.5,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 1,
+                            "type": "normal",
+                            "weight_kg": 10,
+                            "reps": 10,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 2,
+                            "type": "normal",
+                            "weight_kg": 8,
+                            "reps": 12,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9,
+                            "custom_metric": null
+                        }
+                    ]
+                },
+                {
+                    "index": 5,
+                    "title": "Extension Triceps Poulie Haute",
+                    "notes": "",
+                    "exercise_template_id": "93A552C6",
+                    "superset_id": null,
+                    "sets": [
+                        {
+                            "index": 0,
+                            "type": "normal",
+                            "weight_kg": 32.5,
+                            "reps": 14,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 1,
+                            "type": "normal",
+                            "weight_kg": 32.5,
+                            "reps": 11,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 2,
+                            "type": "normal",
+                            "weight_kg": 32.5,
+                            "reps": 5,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9,
+                            "custom_metric": null
+                        }
+                    ]
+                },
+                {
+                    "index": 6,
+                    "title": "Crunch (Machine)",
+                    "notes": "",
+                    "exercise_template_id": "EB43ADD4",
+                    "superset_id": null,
+                    "sets": [
+                        {
+                            "index": 0,
+                            "type": "normal",
+                            "weight_kg": 80,
+                            "reps": 11,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 7.5,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 1,
+                            "type": "normal",
+                            "weight_kg": 80,
+                            "reps": 11,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": null,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 2,
+                            "type": "normal",
+                            "weight_kg": 80,
+                            "reps": 11,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": null,
+                            "custom_metric": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "id": "ccc0785b-0d10-4dca-84f8-89e425b0f50f",
             "title": "Cycle 8.1 : J4-Full Body",
             "routine_id": "5b767305-2b87-4926-bdf3-3465815204ca",
@@ -117341,5 +117626,5 @@
             ]
         }
     ],
-    "count": 275
+    "count": 276
 }
