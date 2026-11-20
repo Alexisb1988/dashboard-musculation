@@ -1,6 +1,398 @@
 {
     "workouts": [
         {
+            "id": "bf986c62-28c4-4c2d-bc41-204165ce6a98",
+            "title": "Cycle 8.1 : J5-Full Body Optionnel",
+            "routine_id": "6a8c56b4-4f34-4c14-bcb5-ebde5af28fc7",
+            "description": "",
+            "start_time": "2026-11-20T05:04:36+00:00",
+            "end_time": "2026-11-20T06:19:01+00:00",
+            "updated_at": "2026-11-20T06:19:04.977Z",
+            "created_at": "2026-11-20T06:19:04.977Z",
+            "media": [],
+            "exercises": [
+                {
+                    "index": 0,
+                    "title": "Échauffement",
+                    "notes": null,
+                    "exercise_template_id": "79EF4E4F",
+                    "superset_id": null,
+                    "sets": [
+                        {
+                            "index": 0,
+                            "type": "normal",
+                            "weight_kg": null,
+                            "reps": null,
+                            "distance_meters": null,
+                            "duration_seconds": 150,
+                            "rpe": null,
+                            "custom_metric": null
+                        }
+                    ]
+                },
+                {
+                    "index": 1,
+                    "title": "Chest Press Incliné (Machine)",
+                    "notes": null,
+                    "exercise_template_id": "FBF92739",
+                    "superset_id": null,
+                    "sets": [
+                        {
+                            "index": 0,
+                            "type": "warmup",
+                            "weight_kg": 40,
+                            "reps": 8,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": null,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 1,
+                            "type": "warmup",
+                            "weight_kg": 60,
+                            "reps": 4,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": null,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 2,
+                            "type": "normal",
+                            "weight_kg": 70,
+                            "reps": 12,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 8.5,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 3,
+                            "type": "normal",
+                            "weight_kg": 70,
+                            "reps": 10,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 8.5,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 4,
+                            "type": "normal",
+                            "weight_kg": 70,
+                            "reps": 9,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9.5,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 5,
+                            "type": "normal",
+                            "weight_kg": 70,
+                            "reps": 8,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9.5,
+                            "custom_metric": null
+                        }
+                    ]
+                },
+                {
+                    "index": 2,
+                    "title": "Rowing Poulie Assis - Prise en V",
+                    "notes": null,
+                    "exercise_template_id": "0393F233",
+                    "superset_id": null,
+                    "sets": [
+                        {
+                            "index": 0,
+                            "type": "normal",
+                            "weight_kg": 85,
+                            "reps": 12,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 8.5,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 1,
+                            "type": "normal",
+                            "weight_kg": 85,
+                            "reps": 12,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 2,
+                            "type": "normal",
+                            "weight_kg": 80,
+                            "reps": 12,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9,
+                            "custom_metric": null
+                        }
+                    ]
+                },
+                {
+                    "index": 3,
+                    "title": "Curl Concentré",
+                    "notes": null,
+                    "exercise_template_id": "724CDE60",
+                    "superset_id": null,
+                    "sets": [
+                        {
+                            "index": 0,
+                            "type": "normal",
+                            "weight_kg": 16,
+                            "reps": 12,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 1,
+                            "type": "normal",
+                            "weight_kg": 16,
+                            "reps": 10,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9.5,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 2,
+                            "type": "normal",
+                            "weight_kg": 16,
+                            "reps": 10,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9.5,
+                            "custom_metric": null
+                        }
+                    ]
+                },
+                {
+                    "index": 4,
+                    "title": "Trap-3 Raise",
+                    "notes": null,
+                    "exercise_template_id": "b3131afd-d7b6-405d-a57c-47810d198e32",
+                    "superset_id": null,
+                    "sets": [
+                        {
+                            "index": 0,
+                            "type": "normal",
+                            "weight_kg": 6,
+                            "reps": 15,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 1,
+                            "type": "normal",
+                            "weight_kg": 6,
+                            "reps": 13,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9.5,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 2,
+                            "type": "normal",
+                            "weight_kg": 6,
+                            "reps": 12,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9,
+                            "custom_metric": null
+                        }
+                    ]
+                },
+                {
+                    "index": 5,
+                    "title": "Extension Triceps au-dessus de la Tête Unilatéral",
+                    "notes": null,
+                    "exercise_template_id": "a5280c17-3ac9-42d5-99c7-f735d437dc60",
+                    "superset_id": null,
+                    "sets": [
+                        {
+                            "index": 0,
+                            "type": "normal",
+                            "weight_kg": 12.5,
+                            "reps": 12,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9.5,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 1,
+                            "type": "normal",
+                            "weight_kg": 10,
+                            "reps": 15,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9.5,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 2,
+                            "type": "normal",
+                            "weight_kg": 10,
+                            "reps": 12,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": 9.5,
+                            "custom_metric": null
+                        }
+                    ]
+                },
+                {
+                    "index": 6,
+                    "title": "Adducteur À La Poulie",
+                    "notes": null,
+                    "exercise_template_id": "b71dcda3-7d65-4c36-9a82-15d1ccdb55d6",
+                    "superset_id": null,
+                    "sets": [
+                        {
+                            "index": 0,
+                            "type": "normal",
+                            "weight_kg": 10,
+                            "reps": 10,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": null,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 1,
+                            "type": "normal",
+                            "weight_kg": 10,
+                            "reps": 10,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": null,
+                            "custom_metric": null
+                        }
+                    ]
+                },
+                {
+                    "index": 7,
+                    "title": "Kickback Poulie Basse",
+                    "notes": null,
+                    "exercise_template_id": "607727eb-6c24-4245-ad81-2d50ca10019c",
+                    "superset_id": null,
+                    "sets": [
+                        {
+                            "index": 0,
+                            "type": "normal",
+                            "weight_kg": 10,
+                            "reps": 10,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": null,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 1,
+                            "type": "normal",
+                            "weight_kg": 10,
+                            "reps": 10,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": null,
+                            "custom_metric": null
+                        }
+                    ]
+                },
+                {
+                    "index": 8,
+                    "title": "Élévation Latérale Assis (Haltère)",
+                    "notes": "Exo en plus à la place des fentes bulgares",
+                    "exercise_template_id": "e028bc84-0318-4425-a534-fa0587521a96",
+                    "superset_id": null,
+                    "sets": [
+                        {
+                            "index": 0,
+                            "type": "normal",
+                            "weight_kg": 8,
+                            "reps": 12,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": null,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 1,
+                            "type": "normal",
+                            "weight_kg": 8,
+                            "reps": 12,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": null,
+                            "custom_metric": null
+                        }
+                    ]
+                },
+                {
+                    "index": 9,
+                    "title": "Flexion Latérale (Haltère)",
+                    "notes": "Reps totales (les deux côtés)",
+                    "exercise_template_id": "026FD047",
+                    "superset_id": null,
+                    "sets": [
+                        {
+                            "index": 0,
+                            "type": "normal",
+                            "weight_kg": 24,
+                            "reps": 30,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": null,
+                            "custom_metric": null
+                        },
+                        {
+                            "index": 1,
+                            "type": "normal",
+                            "weight_kg": 24,
+                            "reps": 30,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": null,
+                            "custom_metric": null
+                        }
+                    ]
+                },
+                {
+                    "index": 10,
+                    "title": "Crunch",
+                    "notes": null,
+                    "exercise_template_id": "DCF3B31B",
+                    "superset_id": null,
+                    "sets": [
+                        {
+                            "index": 0,
+                            "type": "normal",
+                            "weight_kg": null,
+                            "reps": 25,
+                            "distance_meters": null,
+                            "duration_seconds": null,
+                            "rpe": null,
+                            "custom_metric": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "id": "93f49fed-8198-4f38-9512-cb6e901d1f1b",
             "title": "Cycle 8.1 : J4-Full Body",
             "routine_id": "5b767305-2b87-4926-bdf3-3465815204ca",
@@ -127416,5 +127808,5 @@
             ]
         }
     ],
-    "count": 304
+    "count": 305
 }
